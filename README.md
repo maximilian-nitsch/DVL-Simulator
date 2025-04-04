@@ -56,7 +56,7 @@ This project depends on the following literature and libraries:
 
 - **Eigen3**: Eigen is a C++ template library for linear algebra: [Eigen website](https://eigen.tuxfamily.org/).
 - **ROS 2 Humble**: ROS 2 is a set of software libraries and tools for building robot applications: [ROS 2 Installation page](https://docs.ros.org/en/humble/Installation.html).
-- **Navigation-Interfaces**: Custom ROS 2 interfaces repository: [Navigation-Interfaces]([https://docs.ros.org/en/humble/Installation.html](https://github.com/maximilian-nitsch/Navigation-Interfaces).
+- **Navigation-Interfaces**: Custom ROS 2 interfaces repository: [Navigation-Interfaces](https://github.com/maximilian-nitsch/Navigation-Interfaces).
 
 ## ROS 2 Node Description
 
