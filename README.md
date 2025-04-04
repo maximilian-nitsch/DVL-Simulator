@@ -56,7 +56,7 @@ This project depends on the following literature and libraries:
 
 - **Eigen3**: Eigen is a C++ template library for linear algebra: [Eigen website](https://eigen.tuxfamily.org/).
 - **ROS 2 Humble**: ROS 2 is a set of software libraries and tools for building robot applications: [ROS 2 Installation page](https://docs.ros.org/en/humble/Installation.html).
-
+- **Navigation-Interfaces**: Custom ROS 2 interfaces repository: [Navigation-Interfaces]([https://docs.ros.org/en/humble/Installation.html](https://github.com/maximilian-nitsch/Navigation-Interfaces).
 
 ## ROS 2 Node Description
 
@@ -70,7 +70,7 @@ This node publishes the following topics:
 
 | Topic Name       | Message Type        | Description                        | Link     |
 |------------------|---------------------|------------------------------------|----------|
-| `velocity_and_transducer`   | `nanoauv_sensor_driver_interfaces/DvlVelocity.msg`   | Custom DVL velocity and beam data.| [DvlVelocity.msg](https://gitlab.informatik.uni-bremen.de/triple/gnc/interfaces/-/blob/b95efc88d33a9e439025056c988c6459589b86e5/nanoauv_sensor_driver_interfaces/msg/DvlVelocity.msg) |
+| `velocity_and_transducer`   | `nanoauv_sensor_driver_interfaces/DvlVelocity.msg`   | Custom DVL velocity and beam data.| [DvlVelocity.msg]([/nanoauv_sensor_driver_interfaces/msg/DvlVelocity.msg](https://github.com/maximilian-nitsch/Navigation-Interfaces/blob/main/nanoauv_sensor_driver_interfaces/msg/DvlVelocity.msg) |
 
 ### Subscribers
 
