@@ -70,7 +70,7 @@ This node publishes the following topics:
 
 | Topic Name       | Message Type        | Description                        | Link     |
 |------------------|---------------------|------------------------------------|----------|
-| `velocity_and_transducer`   | `nanoauv_sensor_driver_interfaces/DvlVelocity.msg`   | Custom DVL velocity and beam data.| [DvlVelocity.msg]([/nanoauv_sensor_driver_interfaces/msg/DvlVelocity.msg](https://github.com/maximilian-nitsch/Navigation-Interfaces/blob/main/nanoauv_sensor_driver_interfaces/msg/DvlVelocity.msg) |
+| `velocity_and_transducer`   | `nanoauv_sensor_driver_interfaces/DvlVelocity.msg`   | Custom DVL velocity and beam data.| [DvlVelocity.msg](https://github.com/maximilian-nitsch/Navigation-Interfaces/blob/main/nanoauv_sensor_driver_interfaces/msg/DvlVelocity.msg) |
 
 ### Subscribers
 
