@@ -1,0 +1,40 @@
+# @license BSD-3 https://opensource.org/licenses/BSD-3-Clause
+# Copyright (c) 2024, Institute of Automatic Control - RWTH Aachen University
+# Maximilian Nitsch (m.nitsch@irt.rwth-aachen.de)
+# All rights reserved.
+
+dvl_simulator:
+  general_settings:
+    sample_time: 0.2 # (s)
+    seed: 42
+    use_constant_seed: false
+
+  model_parameter_settings:
+    beam_velocity_noise_std: 0.01 # (m/s)
+    scale_factor_noise_std: 0.0 # (%)
+    beam_bias_noise_std: 5.0e-04 # (m/s)
+    gyroscope_noise_std: [
+        0.000207479860047933,
+        0.000243411420514079,
+        0.000187943045943727,
+      ] # (rad/s^(1/2)), STIM300 IMU
+    interval_initial_scale_factor: 0.1 # (%)
+    interval_initial_beam_bias: [0.0, 0.0, 0.0, 0.0] # (m/s)
+    beam_bias_correlation_time: 1800.0 # (s)
+    resolution: 1.0e-04 # (m/s)
+    beam_angle: 22.5 # (deg)
+    min_altitude: 0.05 # (m)
+    max_altitude: 50.0 # (m)
+    distance_to_ground: -5.0 # (m)
+    max_velocity: 3.75 # (m/s)
+    lever_arm_body_to_sensor_frame: [0.0, 0.0, 0.0] # (m)
+    rotation_body_to_sensor_frame: [0.0, 0.0, 0.0] # RPY Euler angles in ZYX convention (deg)
+
+  model_enable_settings:
+    enable_beam_velocity_noise: true
+    enable_scale_factor: true
+    enable_beam_bias: true
+    enable_gyroscope_noise: true
+    enable_quantization: true
+    enable_altitude_limit: true
+    enable_velocity_limit: true
