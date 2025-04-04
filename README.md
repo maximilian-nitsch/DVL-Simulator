@@ -4,7 +4,7 @@
 [![Build Status](https://gitlab.informatik.uni-bremen.de/%{project_path}/badges/%{default_branch}/pipeline.svg)](https://gitlab.informatik.uni-bremen.de/triple/gnc/sensors/dvl-simulator/-/commits/main)
 [![Coverage](https://gitlab.com/your-username/project-name/badges/master/coverage.svg)](https://gitlab.com/your-username/project-name/pipelines)
 
-![](./data/icon.svg){width=20%}
+<img src="./data/icon.png" alt="Icon" width="50%">
 
 <!--- protected region package header begins -->
 **Author:**
