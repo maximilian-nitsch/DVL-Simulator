@@ -1,10 +1,8 @@
 # C++/ROS 2 Doppler-Velocity Log Simulator
 
 [![License](https://img.shields.io/badge/license-BSD--3-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
-[![Build Status](https://gitlab.informatik.uni-bremen.de/%{project_path}/badges/%{default_branch}/pipeline.svg)](https://gitlab.informatik.uni-bremen.de/triple/gnc/sensors/dvl-simulator/-/commits/main)
-[![Coverage](https://gitlab.com/your-username/project-name/badges/master/coverage.svg)](https://gitlab.com/your-username/project-name/pipelines)
 
-![](./data/icon.svg){width=20%}
+<img src="./data/icon.svg" alt="Icon" width="20%">
 
 <!--- protected region package header begins -->
 **Author:**
@@ -33,7 +31,7 @@ The simulator implements the following features:
 - All models and effects can be enabled/disabled separately
 
 The acoustic propagation is currently not simulated. 
-Instead the sensor frame velocity is transformed to beam velocities.
+Instead, the sensor frame velocity is transformed to beam velocities.
 The beam velocites are then corrupted with errors and transformed back (least square solution) to DVL velocity.
 
 An example config file from real data of a WaterLinked DVL A50 is provided.
@@ -58,12 +56,12 @@ This project depends on the following literature and libraries:
 
 - **Eigen3**: Eigen is a C++ template library for linear algebra: [Eigen website](https://eigen.tuxfamily.org/).
 - **ROS 2 Humble**: ROS 2 is a set of software libraries and tools for building robot applications: [ROS 2 Installation page](https://docs.ros.org/en/humble/Installation.html).
-
+- **Navigation-Interfaces**: Custom ROS 2 interfaces repository: [Navigation-Interfaces](https://github.com/maximilian-nitsch/Navigation-Interfaces).
 
 ## ROS 2 Node Description
 
 The DVL simulator node implements eleven publishers and subscribes to one topic.
-Some publishers just provide placeholder values to replicate DVL driver data or hold values for future extensions.
+Some publishers provide placeholder values to replicate DVL driver data or hold values for future extensions.
 ROS 2 services or actions are not provided.
 
 ### Publishers
@@ -72,7 +70,7 @@ This node publishes the following topics:
 
 | Topic Name       | Message Type        | Description                        | Link     |
 |------------------|---------------------|------------------------------------|----------|
-| `velocity_and_transducer`   | `nanoauv_sensor_driver_interfaces/DvlVelocity.msg`   | Custom DVL velocity and beam data.| [DvlVelocity.msg](https://gitlab.informatik.uni-bremen.de/triple/gnc/interfaces/-/blob/b95efc88d33a9e439025056c988c6459589b86e5/nanoauv_sensor_driver_interfaces/msg/DvlVelocity.msg) |
+| `velocity_and_transducer`   | `nanoauv_sensor_driver_interfaces/DvlVelocity.msg`   | Custom DVL velocity and beam data.| [DvlVelocity.msg](https://github.com/maximilian-nitsch/Navigation-Interfaces/blob/main/nanoauv_sensor_driver_interfaces/msg/DvlVelocity.msg) |
 
 ### Subscribers
 
@@ -94,7 +92,7 @@ To install the `dvl_simulator_package`, you need to follow these steps:
     sudo apt-get install libeigen3-dev
     ```
 
-2. **Install ROS 2 Humble**: Make sure you have ROS 2 (Humble) installed. You can follow the official installation instructions provided by ROS 2. Visit [ROS 2 Humble Installation page](https://docs.ros.org/en/humble/Installation.html) for detailed installation instructions tailored to your platform.
+2. **Install ROS 2 Humble**: Ensure you have ROS 2 (Humble) installed. You can follow the official installation instructions provided by ROS 2. Visit [ROS 2 Humble Installation page](https://docs.ros.org/en/humble/Installation.html) for detailed installation instructions tailored to your platform.
 
 3. **Clone the Package**: Clone the package repository to your ROS 2 workspace. If you don't have a ROS 2 workspace yet, you can create one using the following commands:
 
@@ -111,7 +109,7 @@ To install the `dvl_simulator_package`, you need to follow these steps:
 
     Replace `<repository_url>` with the URL of your package repository.
 
-4. **Build the Package**: Once the package is cloned, you need to build it using colcon, the default build system for ROS 2. Navigate to your ROS 2 workspace and run the following command:
+4. **Build the Package**: Once the package is cloned, you must build it using colcon, the default build system for ROS 2. Navigate to your ROS 2 workspace and run the following command:
 
     ```bash
     cd /path/to/ros2_workspace
@@ -128,7 +126,7 @@ To install the `dvl_simulator_package`, you need to follow these steps:
 
     Replace `/path/to/ros2_workspace` with the actual path to your ROS 2 workspace.
 
-That's it! Your `dvl_simulator_package` should now be installed along with its dependencies, and ready to use in your ROS 2 environment.
+That's it! Your `dvl_simulator_package` should now be installed along with its dependencies and ready to use in your ROS 2 environment.
 
 ## Usage
 
@@ -142,12 +140,12 @@ That's it! Your `dvl_simulator_package` should now be installed along with its d
 
 3. **Provide an odometry publisher** from you vehicle simulation.
 
-4. **Check ROS 2 topics** the DVL values should now be published.
+4. **Check ROS 2 topics** The DVL values should now be published.
 
 
 **Important Usage Information**:
-- The odometry message needs to be published with at least the DVL data rate/sample time.
-- The message `/velocity_and_transducer/diagnostic_array` will show `WARN` if odometry rate is lower.
+- The odometry message must be published with at least the DVL data rate/sample time.
+- The message `/velocity_and_transducer/diagnostic_array` will show `WARN` if the odometry rate is lower.
 - If no odometry message is published, the message `/velocity_and_transducer/diagnostic_array` will show `STALE`.
 - If everything is correct `/velocity_and_transducer/diagnostic_array` will show `OK`. 
 
@@ -176,29 +174,9 @@ The DVL simulator implementation follows the datasheets and publications:
 - Taudien, J. Y.; Bilén, S. G. (2018). Quantifying Long-Term Accuracy of Sonar Doppler Velocity Logs. In: *IEEE Journal of Oceanic Engineering*, Vol. 43, no. 3, July 2018, pp. 764–776. doi: [10.1109/JOE.2017.2735558](https://doi.org/10.1109/JOE.2017.2735558).
 - Meachum, B.; Hui, N. (2021). Verifying Performance, Integration of DVL for Small ROVs, AUVs. In: *SeaTechnology*, Feb. 2021. Ed. by Compass Publications Inc.
 
-## Reports
-
-Coverage Report:
-- https://triple.glpages.informatik.uni-bremen.de/gnc/sensors/dvl-simulator/fancy_html_coverage_report/
-
-Dokumentation: (Doxygen Awesome)
-- https://triple.glpages.informatik.uni-bremen.de/gnc/sensors/dvl-simulator/doxygen_awesome/html/
-
-Documentation Coverage:
-- https://triple.glpages.informatik.uni-bremen.de/gnc/sensors/dvl-simulator/doxygen_awesome/doc-coverage/
-
-Code Climate Report:
-- https://triple.glpages.informatik.uni-bremen.de/gnc/sensors/dvl-simulator/gl-code-quality-report.html
-
-
-## Legacy
-
-Documentation (Doxygen Rosdoc Lite)
-- https://triple.glpages.informatik.uni-bremen.de/gnc/sensors/dvl-simulator/rosdoc_lite/html/
-
 ## Contributing
 
-If you would like to contribute to the project, see the [CONTRIBUTING](CONTRIBUTING) file for details.
+If you want to contribute to the project, see the [CONTRIBUTING](CONTRIBUTING) file for details.
 
 ## License
 
