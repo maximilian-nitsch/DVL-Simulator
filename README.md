@@ -1,6 +1,11 @@
 # C++/ROS 2 Doppler-Velocity Log Simulator
-
-[![License](https://img.shields.io/badge/license-BSD--3-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+![Build](https://github.com/maximilian-nitsch/DVL-Simulator/actions/workflows/ci.yaml/badge.svg)<!-- -->
+![License](https://img.shields.io/github/license/maximilian-nitsch/DVL-Simulator.svg)<!-- -->
+[![Last Commit](https://img.shields.io/github/last-commit/maximilian-nitsch/DVL-Simulator)](https://github.com/maximilian-nitsch/DVL-Simulator/commits/main)<!-- -->
+[![ROS2 Humble](https://img.shields.io/badge/ROS2-Humble-blue)](https://index.ros.org/doc/ros2/Installation/Humble/)<!-- -->
+[![Release](https://img.shields.io/github/v/release/maximilian-nitsch/DVL-Simulator)](https://github.com/maximilian-nitsch/DVL-Simulator/releases)<!-- -->
+[![Open Issues](https://img.shields.io/github/issues/maximilian-nitsch/DVL-Simulator)](https://github.com/maximilian-nitsch/DVL-Simulator/issues)<!-- -->
+[![Contributors](https://img.shields.io/github/contributors/maximilian-nitsch/DVL-Simulator)](https://github.com/maximilian-nitsch/DVL-Simulator/graphs/contributors)
 
 <img src="./data/icon.svg" alt="Icon" width="20%">
 
